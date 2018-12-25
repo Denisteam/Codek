@@ -40,6 +40,7 @@ public class BitsWriter implements Closeable, Flushable{
         }
     }
 
+    @Deprecated
     public void writeBits(byte val, byte count) throws IOException {
         if (count > 8) throw new IllegalArgumentException("Bits count: " + count);
         if (count + pos > 8) {

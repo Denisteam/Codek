@@ -107,6 +107,7 @@ public class ArithmeticCompressor {
     public void decompress() throws IOException {
         byte[] buff = new byte[4];
         source.read(buff);
+        //TODO: 
         long value = ((long) buff[0] << 24) + ((long) buff[1] << 16) + ((long) buff[2] << 8) + buff[3];
         value &= (1L << 32) - 1;
 
